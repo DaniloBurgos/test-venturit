@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/test-venturit/static/css/main.da8aaa59.chunk.css",
-    "main.js": "/test-venturit/static/js/main.3d1f4ac2.chunk.js",
-    "main.js.map": "/test-venturit/static/js/main.3d1f4ac2.chunk.js.map",
+    "main.js": "/test-venturit/static/js/main.5ce4a552.chunk.js",
+    "main.js.map": "/test-venturit/static/js/main.5ce4a552.chunk.js.map",
     "runtime-main.js": "/test-venturit/static/js/runtime-main.433abf30.js",
     "runtime-main.js.map": "/test-venturit/static/js/runtime-main.433abf30.js.map",
     "static/js/2.fb84a22f.chunk.js": "/test-venturit/static/js/2.fb84a22f.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.433abf30.js",
     "static/js/2.fb84a22f.chunk.js",
     "static/css/main.da8aaa59.chunk.css",
-    "static/js/main.3d1f4ac2.chunk.js"
+    "static/js/main.5ce4a552.chunk.js"
   ]
 }
