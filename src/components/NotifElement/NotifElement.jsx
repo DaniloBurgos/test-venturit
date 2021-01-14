@@ -98,7 +98,7 @@ export const NotifElement = ({type,date}) => {
 
     return(<ButtonBase className={classes.notifContainer}>
 
-                <img src={"/img/not"+type+".png"} className={classes.notImage} alt=""/>
+                <img src={"./img/not"+type+".png"} className={classes.notImage} alt=""/>
 
                 <div className={classes.info}>
 

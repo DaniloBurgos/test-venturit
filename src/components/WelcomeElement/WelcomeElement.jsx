@@ -156,7 +156,7 @@ export const WelcomeElement = ({userName, state, language}) => {
                     <Typography className={classes.langCurrent} >Currently Learning</Typography>
 
                     <div className={classes.languageBadge}>
-                        <img src={"/img/"+language+".png"} className={classes.langFlag}></img>
+                        <img src={`./img/${language.toLowerCase()}.png`} className={classes.langFlag}></img>
                         <Typography className={classes.langName}>{language}</Typography>
                     </div>
 
@@ -166,7 +166,7 @@ export const WelcomeElement = ({userName, state, language}) => {
 
             <div className={classes.lowerRow}>
 
-                        <img src={"/img/header.png"} className={classes.langFlag}></img>
+                        <img src={"./img/header.png"} className={classes.langFlag}></img>
 
 
                         <div className={classes.bannerInfo}>
