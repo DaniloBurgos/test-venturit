@@ -104,7 +104,14 @@ const useStyles = makeStyles({
         width: "100%",
         justifyContent: "space-between",
         alignItems: "flex-start",
-        marginBottom: "15px"
+        marginBottom: "15px",
+
+        "@media (max-width: 1000px)": {
+
+            width: "100%",
+            marginTop: "32px"
+
+        }
 
     },
 
@@ -127,7 +134,13 @@ const useStyles = makeStyles({
 
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+
+        "@media (max-width: 1000px)": {
+
+            flexDirection: "column",
+
+        }
 
 
     },
@@ -136,7 +149,15 @@ const useStyles = makeStyles({
 
         width: "69%",
         height: "280px",
-        backgroundColor: "yellow"
+        backgroundColor: "yellow",
+        borderRadius: "15px",
+
+        "@media (max-width: 1000px)": {
+
+            width: "100%",
+            height: "280px",
+
+        }
     },
 
     eventsToday: {
@@ -146,7 +167,14 @@ const useStyles = makeStyles({
 
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+
+        "@media (max-width: 1000px)": {
+
+            height: "auto",
+            width: "100%",
+
+        }
 
 
     },
@@ -177,7 +205,8 @@ const useStyles = makeStyles({
         lineHeight: "26px",
         letterSpacing: "1px",
         width:"100%",
-        height: "0px"
+
+
 
     },
 
