@@ -32,6 +32,7 @@ export const ProgressComponent = ({events, eventsToday}) => {
                      </div>
 
 
+
                      <div className={classes.dataCards}>
 
                             <ProgressCards task="1" number="9"></ProgressCards>
@@ -90,7 +91,15 @@ const useStyles = makeStyles({
 
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+
+        "@media (max-width: 1000px)": {
+
+            flexDirection: "column",
+
+
+        }
+
 
 
     },
@@ -112,6 +121,14 @@ const useStyles = makeStyles({
         width: "35%",
         height: "421px",
         backgroundColor: "#1A2D7D",
+        borderRadius: "15px",
+
+        "@media (max-width: 1000px)": {
+
+            width: "100%",
+
+
+        }
 
 
 
@@ -126,7 +143,14 @@ const useStyles = makeStyles({
 
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+
+        "@media (max-width: 1000px)": {
+
+            width: "100%",
+
+
+        }
 
     },
 

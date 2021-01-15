@@ -25,7 +25,24 @@ const useStyles = makeStyles({
 
         '&:hover': {
             backgroundColor: "#F5F5F5"
-         }
+         },
+
+
+         "@media (max-width: 1000px)": {
+
+            width: "100%",
+            height: "200px",
+
+            paddingBottom: "21px",
+            paddingTop: "21px",
+
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+
+        }
+
+
 
     },
 

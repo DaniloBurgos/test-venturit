@@ -43,6 +43,27 @@ export const EventElement = ({events, eventsToday}) => {
 
                         </div>
 
+                        <div className={classes.eventsTodayMobile}>
+
+                        <div className={classes.upperRowToday}>
+
+                            <Typography className={classes.tittleTwo}>EVENTS TODAY</Typography>
+                            <hr className={classes.lineTittle}></hr>
+
+                            </div>
+
+                            <div className={classes.containerTodayMobile}>
+
+                            <TodayEvent type="1" date="10:30AM"></TodayEvent>
+                            <div className={classes.separador}></div>
+                            <TodayEvent type="2" date="2:15PM"></TodayEvent>
+
+                            </div>
+
+
+
+                        </div>
+
 
 
             </div>
@@ -65,6 +86,13 @@ EventElement.propTypes = {
 }
 
 const useStyles = makeStyles({
+
+    separador: {
+
+        width: "5%",
+        height: "auto"
+
+    },
 
     eventContainer: {
 
@@ -171,12 +199,41 @@ const useStyles = makeStyles({
 
         "@media (max-width: 1000px)": {
 
-            height: "auto",
-            width: "100%",
+            display: "none !important",
 
-        }
+        },
+    },
+
+        eventsTodayMobile: {
+
+            /*
+            width: "29%",
+            height: "280px",
 
 
+            flexDirection: "column",
+            justifyContent: "space-between",
+            */
+
+           display: "none",
+
+            "@media (max-width: 1000px)": {
+
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+
+            },
+
+
+
+    },
+
+
+    containerTodayMobile: {
+
+        display: "flex",
+        flexDirection: "row"
     },
 
     lineTittle: {

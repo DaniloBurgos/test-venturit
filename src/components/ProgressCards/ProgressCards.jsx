@@ -79,7 +79,13 @@ const useStyles = makeStyles({
 
       '&:hover': {
           backgroundColor: "rgba(0, 0, 0, 0.04);"
-       }
+       },
+
+       "@media (max-width: 1370px)": {
+
+        width: "48%",
+
+    }
 
   },
 
