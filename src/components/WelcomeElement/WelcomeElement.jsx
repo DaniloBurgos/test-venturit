@@ -4,7 +4,81 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 
+export const WelcomeElement = ({userName, state, language}) => {
+
+    const classes = useStyles();
+
+
+    return(<div className={classes.welcomeContainer}>
+
+
+            <div className={classes.upperRow}>
+
+                <Typography className={classes.tittle}>Dashboard</Typography>
+
+                <ButtonBase className={classes.languageCard}>
+
+                    <Typography className={classes.langCurrent} >Currently Learning</Typography>
+
+                    <div className={classes.languageBadge}>
+                        <img src={`/test-venturit/img/${language.toLowerCase()}.png`} className={classes.langFlag}></img>
+                        <Typography className={classes.langName}>{language}</Typography>
+                    </div>
+
+                </ButtonBase>
+
+            </div>
+
+            <div className={classes.lowerRow}>
+
+                        <img src={"/test-venturit/img/header.png"} className={classes.welcomeBannerDesktop}></img>
+                        <img src={"/test-venturit/img/welcomeMobile.png"} className={classes.welcomeMobile}></img>
+                        <img src={"/test-venturit/img/bannerWelcomeTablet.png"} className={classes.welcomeTablet}></img>
+
+
+                        <div className={classes.bannerInfo}>
+                            <Typography className={classes.greeting}>Welcome back, {userName}</Typography>
+                            <Typography className={classes.state}>{state}🥳</Typography>
+                        </div>
+
+
+
+            </div>
+
+           </div>
+
+
+
+    );
+
+
+
+}
+
+WelcomeElement.propTypes = {
+
+    userName: PropTypes.string,
+    state: PropTypes.string,
+    language: PropTypes.string,
+
+}
+
 const useStyles = makeStyles({
+
+    welcomeTablet:{
+
+        width: "100%",
+        display: "none",
+
+
+        "@media (max-width: 1000px) and (min-width: 620px)": {
+
+            display: "block",
+
+        },
+
+
+    },
 
     welcomeContainer: {
 
@@ -91,7 +165,6 @@ const useStyles = makeStyles({
     lowerRow: {
 
         width: "100%",
-        height: "146",
         position: "relative"
 
     },
@@ -99,6 +172,33 @@ const useStyles = makeStyles({
     langFlag: {
 
         width: "100%",
+
+    },
+
+    welcomeBannerDesktop: {
+
+        width: "100%",
+        display: "block",
+
+        "@media (max-width: 1000px)": {
+
+            display: "none",
+
+        },
+
+
+    },
+
+    welcomeMobile: {
+
+        width: "100%",
+        display: "none",
+
+        "@media (max-width: 619px)": {
+
+            display: "block",
+
+        },
 
 
     },
@@ -110,7 +210,18 @@ const useStyles = makeStyles({
         position: "absolute",
         top: "55%",
         left: "240px",
-        transform: "translateY(-50%)"
+        transform: "translateY(-50%)",
+
+        "@media (max-width: 1000px)": {
+
+            top: "70%",
+            left: "50%",
+            position: "absolute",
+            transform: "translate(-50%,-50%)",
+            textAlign: "center",
+            width: "73%",
+
+        },
 
     },
 
@@ -124,7 +235,14 @@ const useStyles = makeStyles({
         fontWeight: "350",
         lineHeight: "36px",
         letterSpacing: "-0.85714287px",
-        marginBottom: "10px"
+        marginBottom: "10px",
+
+        "@media (max-width: 1000px)": {
+
+            fontSize: "6vw",
+            lineHeight: "6vw"
+
+        },
 
     },
 
@@ -136,6 +254,13 @@ const useStyles = makeStyles({
         fontWeight: "500",
         lineHeight: "26px",
 
+        "@media (max-width: 1000px)": {
+
+            fontSize: "4vw",
+
+
+        },
+
     }
 
 
@@ -143,60 +268,3 @@ const useStyles = makeStyles({
 
 
 });
-
-export const WelcomeElement = ({userName, state, language}) => {
-
-    const classes = useStyles();
-
-
-    return(<div className={classes.welcomeContainer}>
-
-
-            <div className={classes.upperRow}>
-
-                <Typography className={classes.tittle}>Dashboard</Typography>
-
-                <ButtonBase className={classes.languageCard}>
-
-                    <Typography className={classes.langCurrent} >Currently Learning</Typography>
-
-                    <div className={classes.languageBadge}>
-                        <img src={`/test-venturit/img/${language.toLowerCase()}.png`} className={classes.langFlag}></img>
-                        <Typography className={classes.langName}>{language}</Typography>
-                    </div>
-
-                </ButtonBase>
-
-            </div>
-
-            <div className={classes.lowerRow}>
-
-                        <img src={"/test-venturit/img/header.png"} className={classes.langFlag}></img>
-
-
-                        <div className={classes.bannerInfo}>
-                            <Typography className={classes.greeting}>Welcome back, {userName}</Typography>
-                            <Typography className={classes.state}>{state}🥳</Typography>
-                        </div>
-
-
-
-            </div>
-
-           </div>
-
-
-
-    );
-
-
-
-}
-
-WelcomeElement.propTypes = {
-
-    userName: PropTypes.string,
-    state: PropTypes.string,
-    language: PropTypes.string,
-
-}

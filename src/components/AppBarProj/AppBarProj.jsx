@@ -112,6 +112,10 @@ export const AppBarProj = ({userName,userPhoto}) => {
 
     return(<div className={classes.appBarContent}>
 
+                <IconButton className={classes.onlyMobile} aria-label="notification">
+                    <img src="/test-venturit/img/menuMobileIcon.svg" className={classes.menuMobile} alt=""/>
+                </IconButton>
+
                 <img src="/test-venturit/img/logo.png" className={classes.logo} alt=""/>
 
                 <div className={classes.searchContainer+" "+classes.deskElement}>
@@ -239,6 +243,30 @@ const useStyles = makeStyles({
         boxSizing: "border-box",
         paddingLeft: "10px",
         paddingRight: "10px",
+
+        "@media (max-width: 1000px)": {
+
+            paddingLeft: "5%",
+            paddingRight: "5%",
+
+        }
+
+    },
+
+    menuMobile: {
+
+        width: "24px",
+
+    },
+
+    onlyMobile: {
+
+        display: "none",
+        "@media (max-width: 1000px)": {
+
+            display: "block",
+
+        }
 
     },
 
