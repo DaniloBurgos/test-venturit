@@ -110,7 +110,7 @@ export const TodayEvent = ({type,date}) => {
 
     return(<ButtonBase className={classes.eventContainer}>
 
-                <img src={"/test-venturit/img/thumbFinal.png"} className={classes.notImage} alt=""/>
+                <img src={"./img/thumbFinal.png"} className={classes.notImage} alt=""/>
 
                 <div className={classes.info}>
 

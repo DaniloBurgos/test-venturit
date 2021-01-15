@@ -56,7 +56,7 @@ export const ProgressComponent = ({events, eventsToday}) => {
 
 
 
-                    <img className={classes.bannerFinal} src="/test-venturit/img/bannerFinal.png"></img>
+                    <img className={classes.bannerFinal} src="./img/bannerFinal.png"></img>
 
                 </div>
 

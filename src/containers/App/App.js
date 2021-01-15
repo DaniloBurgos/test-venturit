@@ -19,7 +19,7 @@ function App() {
 
     <TemplateApp>
 
-      <AppBarProj userName="Clarence Russell" userPhoto="/test-venturit/img/profile.png"></AppBarProj>
+      <AppBarProj userName="Clarence Russell" userPhoto="./img/profile.png"></AppBarProj>
 
       <NavBarProj></NavBarProj>
 

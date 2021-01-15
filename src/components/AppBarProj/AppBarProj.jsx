@@ -113,17 +113,17 @@ export const AppBarProj = ({userName,userPhoto}) => {
     return(<div className={classes.appBarContent}>
 
                 <IconButton className={classes.onlyMobile} aria-label="notification">
-                    <img src="/test-venturit/img/menuMobileIcon.svg" className={classes.menuMobile} alt=""/>
+                    <img src="./img/menuMobileIcon.svg" className={classes.menuMobile} alt=""/>
                 </IconButton>
 
-                <img src="/test-venturit/img/logo.png" className={classes.logo} alt=""/>
+                <img src="./img/logo.png" className={classes.logo} alt=""/>
 
                 <div className={classes.searchContainer+" "+classes.deskElement}>
 
                   <input className={classes.searchInput} type="text" placeholder="Search and Find"></input>
 
                   <IconButton aria-label="notification">
-                     <img src="/test-venturit/img/search.svg" className={classes.search} alt=""/>
+                     <img src="./img/search.svg" className={classes.search} alt=""/>
                   </IconButton>
                 </div>
 
@@ -131,13 +131,13 @@ export const AppBarProj = ({userName,userPhoto}) => {
                 <div className={classes.rightSide}>
 
                     <Button variant="contained" disableElevation className={classes.root}>
-                        <img src="/test-venturit/img/add.svg" className={classes.add} alt=""/> ADD
+                        <img src="./img/add.svg" className={classes.add} alt=""/> ADD
                     </Button>
 
                     <IconButton className={classes.deskElement} aria-describedby={id} aria-label="notification" onClick={handleClick}>
-                        <img src="/test-venturit/img/notification.png" className={classes.function}/>
+                        <img src="./img/notification.png" className={classes.function}/>
                         {notification===true
-                         ?<img src="/test-venturit/img/new.png" className={classes.new} alt=""/>
+                         ?<img src="./img/new.png" className={classes.new} alt=""/>
                          :null
                         }
                     </IconButton>
@@ -172,9 +172,9 @@ export const AppBarProj = ({userName,userPhoto}) => {
                     </Popover>
 
                     <IconButton className={classes.deskElement} aria-describedby={idMess} aria-label="message" onClick={handleClickMess}>
-                        <img src="/test-venturit/img/message.png" className={classes.function} alt=""/>
+                        <img src="./img/message.png" className={classes.function} alt=""/>
                         {message===true
-                         ?<img src="/test-venturit/img/new.png" className={classes.new} alt=""/>
+                         ?<img src="./img/new.png" className={classes.new} alt=""/>
                          :null
                         }
                     </IconButton>
@@ -213,7 +213,7 @@ export const AppBarProj = ({userName,userPhoto}) => {
                     <img src={userPhoto} className={classes.thumbNail} alt=""/>
 
                     <IconButton className={classes.deskElement} aria-label="message">
-                        <img src="/test-venturit/img/downNavbar.png" className={classes.downNavbar} alt=""/>
+                        <img src="./img/downNavbar.png" className={classes.downNavbar} alt=""/>
                     </IconButton>
 
                 </div>

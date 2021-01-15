@@ -100,8 +100,8 @@ export const NavBarProj = () => {
             }}>
 
                 {toggleActiveStyles(index) === classes.active
-                ? <img src={"/test-venturit/img/menu"+index+".png"} className={classes.navIcon} alt=""/>
-                : <img src={"/test-venturit/img/menuInac"+index+".png"} className={classes.navIcon} alt=""/>
+                ? <img src={"./img/menu"+index+".png"} className={classes.navIcon} alt=""/>
+                : <img src={"./img/menuInac"+index+".png"} className={classes.navIcon} alt=""/>
                 }
 
 
