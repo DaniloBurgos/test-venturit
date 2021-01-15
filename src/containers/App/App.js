@@ -19,13 +19,13 @@ function App() {
 
     <TemplateApp>
 
-      <AppBarProj userName="Ilian Burgos" userPhoto="./img/profile.png"></AppBarProj>
+      <AppBarProj userName="Clarence Russell" userPhoto="/test-venturit/img/profile.png"></AppBarProj>
 
       <NavBarProj></NavBarProj>
 
       <DashHolder>
 
-        <WelcomeElement userName="Danilo" state="Ta-da! You’re up to date." language="English"></WelcomeElement>
+        <WelcomeElement userName="Clarence" state="Ta-da! You’re up to date." language="English"></WelcomeElement>
         <EventElement></EventElement>
 
         <ActivityElement></ActivityElement>

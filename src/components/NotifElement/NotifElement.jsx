@@ -8,72 +8,6 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import { ButtonBase } from '@material-ui/core';
 
-const useStyles = makeStyles({
-
-    notifContainer: {
-
-        width: "283px",
-        height: "50px",
-        marginBottom: "25px",
-
-
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-
-        '&:hover': {
-            backgroundColor: "rgba(0, 0, 0, 0.04);"
-         }
-
-    },
-
-    notImage: {
-
-        width: "50px",
-        height: "50px",
-
-    },
-
-    info: {
-
-        width: "222px",
-        height: "inherit",
-
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-around",
-        alignItems: "flex-start",
-
-
-    },
-
-    notifType: {
-
-        height: "20px",
-        color: "#192452",
-        fontFamily: 'Gilroy',
-        fontSize: "15px",
-        fontWeight: "400",
-        lineHeight: "20px"
-    },
-
-    date: {
-
-
-        color: "#9d9bb6",
-        fontFamily: 'Gilroy',
-        fontSize: "13px",
-        fontWeight: "400",
-        lineHeight: "17px"
-
-    },
-
-
-
-});
-
-
 export const NotifElement = ({type,date}) => {
 
     const classes = useStyles();
@@ -98,7 +32,7 @@ export const NotifElement = ({type,date}) => {
 
     return(<ButtonBase className={classes.notifContainer}>
 
-                <img src={"./img/not"+type+".png"} className={classes.notImage} alt=""/>
+                <img src={"/test-venturit/img/not"+type+".png"} className={classes.notImage} alt=""/>
 
                 <div className={classes.info}>
 
@@ -120,3 +54,68 @@ NotifElement.propTypes = {
     date: PropTypes.string,
 
 }
+
+const useStyles = makeStyles({
+
+  notifContainer: {
+
+      width: "283px",
+      height: "50px",
+      marginBottom: "25px",
+
+
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+
+      '&:hover': {
+          backgroundColor: "rgba(0, 0, 0, 0.04);"
+       }
+
+  },
+
+  notImage: {
+
+      width: "50px",
+      height: "50px",
+
+  },
+
+  info: {
+
+      width: "222px",
+      height: "inherit",
+
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-around",
+      alignItems: "flex-start",
+
+
+  },
+
+  notifType: {
+
+      height: "20px",
+      color: "#192452",
+      fontFamily: 'Gilroy',
+      fontSize: "15px",
+      fontWeight: "400",
+      lineHeight: "20px"
+  },
+
+  date: {
+
+
+      color: "#9d9bb6",
+      fontFamily: 'Gilroy',
+      fontSize: "13px",
+      fontWeight: "400",
+      lineHeight: "17px"
+
+  },
+
+
+
+});

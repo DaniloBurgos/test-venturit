@@ -5,6 +5,64 @@ import PropTypes from 'prop-types';
 import { TodayEvent } from "../TodayEvent/TodayEvent";
 
 
+export const EventElement = ({events, eventsToday}) => {
+
+    const classes = useStyles();
+
+
+    return(<div className={classes.eventContainer}>
+
+
+            <div className={classes.upperRow}>
+
+                <Typography className={classes.tittle}>Events</Typography>
+
+            </div>
+
+            <div className={classes.lowerRow}>
+
+                        <div className={classes.carousel}>
+
+
+
+
+
+                        </div>
+
+                        <div className={classes.eventsToday}>
+
+                        <div className={classes.upperRowToday}>
+
+                            <Typography className={classes.tittleTwo}>EVENTS TODAY</Typography>
+                            <hr className={classes.lineTittle}></hr>
+
+                            </div>
+
+                            <TodayEvent type="1" date="10:30AM"></TodayEvent>
+                            <TodayEvent type="2" date="2:15PM"></TodayEvent>
+
+                        </div>
+
+
+
+            </div>
+
+           </div>
+
+
+
+    );
+
+
+
+}
+
+EventElement.propTypes = {
+
+    events: PropTypes.array,
+    eventsToday: PropTypes.array,
+
+}
 
 const useStyles = makeStyles({
 
@@ -23,9 +81,6 @@ const useStyles = makeStyles({
 
     upperRow: {
 
-
-
-
         display: "flex",
         flexDirection: "row",
         justifyContent: "flex-start",
@@ -39,6 +94,20 @@ const useStyles = makeStyles({
         marginBottom: "25px"
 
     },
+
+    upperRowToday: {
+
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+        width: "100%",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        marginBottom: "15px"
+
+    },
+
 
     tittle: {
 
@@ -54,7 +123,6 @@ const useStyles = makeStyles({
     lowerRow: {
 
         width: "100%",
-        height: "146",
         position: "relative",
 
         display: "flex",
@@ -85,85 +153,33 @@ const useStyles = makeStyles({
 
     lineTittle: {
 
-        width: "88%",
+        width: "125%",
         height: "0.5px",
         textAlign:"right",
-        marginTop: "18px",
-        borderTop: "1px solid #E8E8EE"
+        marginTop: "10px",
+        borderTop: "1px solid #E8E8EE",
+
+        "@media (max-width: 1350px)": {
+
+            display: "none",
+
+        }
 
     },
 
 
     tittleTwo: {
 
-        color: "#103460",
+        color: "#2F4E75",
         fontFamily: "Gotham",
         fontSize: "15px",
-        fontWeight: "400",
+        fontWeight: "600",
         lineHeight: "26px",
         letterSpacing: "1px",
-        width:"100%"
+        width:"100%",
+        height: "0px"
 
     },
 
 
 });
-
-export const EventElement = ({events, eventsToday}) => {
-
-    const classes = useStyles();
-
-
-    return(<div className={classes.eventContainer}>
-
-
-            <div className={classes.upperRow}>
-
-                <Typography className={classes.tittle}>Events</Typography>
-
-            </div>
-
-            <div className={classes.lowerRow}>
-
-                        <div className={classes.carousel}>
-
-
-
-
-
-                        </div>
-
-                        <div className={classes.eventsToday}>
-
-                        <div className={classes.upperRow}>
-
-                            <Typography className={classes.tittleTwo}>Events Today</Typography>
-                            <hr className={classes.lineTittle}></hr>
-
-                            </div>
-
-                            <TodayEvent type="1" date="10:30AM"></TodayEvent>
-                            <TodayEvent type="2" date="2:15PM"></TodayEvent>
-
-                        </div>
-
-
-
-            </div>
-
-           </div>
-
-
-
-    );
-
-
-
-}
-
-EventElement.propTypes = {
-
-    events: PropTypes.array,
-    eventsToday: PropTypes.array,
-
-}

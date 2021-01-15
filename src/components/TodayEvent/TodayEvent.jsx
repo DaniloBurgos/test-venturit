@@ -11,14 +11,14 @@ const useStyles = makeStyles({
     eventContainer: {
 
         width: "100%",
-        height: "112px",
+        height: "109px",
 
-        paddingLeft: "10px",
-        paddingRight: "10px",
+        paddingLeft: "21px",
+        paddingRight: "21px",
 
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
         backgroundColor: "white",
         borderRadius: "15px",
@@ -33,6 +33,7 @@ const useStyles = makeStyles({
 
         width: "64px",
         height: "64px",
+        marginRight: "19px"
 
     },
 
@@ -40,7 +41,7 @@ const useStyles = makeStyles({
 
 
         height: "inherit",
-        marginLeft: "10px",
+        width:"auto",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -51,13 +52,13 @@ const useStyles = makeStyles({
 
     notifType: {
 
-        height: "20px",
+        height: "auto",
         color: "#192452",
         fontFamily: 'Gilroy',
-        fontSize: "15px",
+        fontSize: "18px",
         fontWeight: "400",
-        lineHeight: "20px",
-        textAlign: "left"
+        lineHeight: "24px",
+        textAlign: "left",
     },
 
     date: {
@@ -65,9 +66,9 @@ const useStyles = makeStyles({
 
         color: "#9d9bb6",
         fontFamily: 'Gilroy',
-        fontSize: "13px",
+        fontSize: "16px",
         fontWeight: "400",
-        lineHeight: "17px"
+        lineHeight: "21px"
 
     },
 
@@ -92,7 +93,7 @@ export const TodayEvent = ({type,date}) => {
 
     return(<ButtonBase className={classes.eventContainer}>
 
-                <img src={"./img/thumbFinal.png"} className={classes.notImage} alt=""/>
+                <img src={"/test-venturit/img/thumbFinal.png"} className={classes.notImage} alt=""/>
 
                 <div className={classes.info}>
 

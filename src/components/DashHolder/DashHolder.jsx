@@ -1,31 +1,5 @@
 import * as React from "react";
-import { Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-
-
-const useStyles = makeStyles({
-
-    dashHolder: {
-
-        width: "80%",
-
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center"
-
-    },
-
-    dashElement: {
-
-        width: "100%",
-        marginBottom: "7px",
-        marginTop: "25px"
-
-    }
-
-
-});
 
 export const DashHolder = ({children}) => {
 
@@ -59,3 +33,33 @@ export const DashHolder = ({children}) => {
 
 
 }
+
+const useStyles = makeStyles({
+
+    dashHolder: {
+
+        width: "80%",
+
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+
+        "@media (max-width: 1000px)": {
+
+            width: "87%",
+
+        }
+
+    },
+
+    dashElement: {
+
+        width: "100%",
+        marginBottom: "7px",
+        marginTop: "21px"
+
+    }
+
+
+});

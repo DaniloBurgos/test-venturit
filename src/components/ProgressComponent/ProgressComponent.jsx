@@ -5,7 +5,81 @@ import PropTypes from 'prop-types';
 import { ProgressCards } from "../ProgressCards/ProgressCards";
 
 
+export const ProgressComponent = ({events, eventsToday}) => {
 
+    const classes = useStyles();
+
+
+    return(<div className={classes.progressContainer}>
+
+
+            <div className={classes.progressGraphic}>
+
+
+
+
+            </div>
+
+            <div className={classes.progressData}>
+
+                <div className={classes.upperColumn}>
+
+                    <div className={classes.progressTitle}>
+
+                        <Typography className={classes.tittle}>Progress</Typography>
+                        <hr className={classes.lineTittle}></hr>
+
+                     </div>
+
+
+                     <div className={classes.dataCards}>
+
+                            <ProgressCards task="1" number="9"></ProgressCards>
+                            <ProgressCards task="2" number="0"></ProgressCards>
+                            <ProgressCards task="3" number="5"></ProgressCards>
+                            <ProgressCards task="4" number="14"></ProgressCards>
+
+
+                     </div>
+
+                </div>
+
+                <div className={classes.lowerConfirm}>
+
+                    <div className={classes.lowerConfirmText}>
+
+                        <Typography className={classes.firstLower}>Confirm your account details</Typography>
+                        <Typography className={classes.secondLower}> Please confirm your email and phone number.😰</Typography>
+
+                    </div>
+
+
+
+                    <img className={classes.bannerFinal} src="/test-venturit/img/bannerFinal.png"></img>
+
+                </div>
+
+
+            </div>
+
+
+
+           </div>
+
+
+
+    );
+
+
+
+}
+
+ProgressComponent.propTypes = {
+
+    events: PropTypes.array,
+    eventsToday: PropTypes.array,
+
+}
 
 const useStyles = makeStyles({
 
@@ -45,8 +119,9 @@ const useStyles = makeStyles({
 
     progressData: {
 
-        width: "58%",
+        width: "59%",
         height: "421px",
+
 
 
         display: "flex",
@@ -131,6 +206,7 @@ const useStyles = makeStyles({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
+        alignContent: "center",
 
 
         flexWrap: "wrap"
@@ -139,79 +215,3 @@ const useStyles = makeStyles({
 
 
 });
-
-export const ProgressComponent = ({events, eventsToday}) => {
-
-    const classes = useStyles();
-
-
-    return(<div className={classes.progressContainer}>
-
-
-            <div className={classes.progressGraphic}>
-
-
-
-            </div>
-
-            <div className={classes.progressData}>
-
-                <div className={classes.upperColumn}>
-
-                    <div className={classes.progressTitle}>
-
-                        <Typography className={classes.tittle}>Progress</Typography>
-                        <hr className={classes.lineTittle}></hr>
-
-                     </div>
-
-
-                     <div className={classes.dataCards}>
-
-                            <ProgressCards task="1" number="9"></ProgressCards>
-                            <ProgressCards task="2" number="0"></ProgressCards>
-                            <ProgressCards task="3" number="5"></ProgressCards>
-                            <ProgressCards task="4" number="14"></ProgressCards>
-
-
-
-                     </div>
-
-                </div>
-
-                <div className={classes.lowerConfirm}>
-
-                    <div className={classes.lowerConfirmText}>
-
-                        <Typography className={classes.firstLower}>Confirm your account details</Typography>
-                        <Typography className={classes.secondLower}> Please confirm your email and phone number.😰</Typography>
-
-                    </div>
-
-
-
-                    <img className={classes.bannerFinal} src="./img/bannerFinal.png"></img>
-
-                </div>
-
-
-            </div>
-
-
-
-           </div>
-
-
-
-    );
-
-
-
-}
-
-ProgressComponent.propTypes = {
-
-    events: PropTypes.array,
-    eventsToday: PropTypes.array,
-
-}

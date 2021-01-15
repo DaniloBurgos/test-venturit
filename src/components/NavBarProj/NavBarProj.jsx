@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 
     navIcon: {
 
-        width: "17px",
+        width: "15px",
         height: "17px"
 
     },
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
         height: "55px",
         borderRadius: "0",
         boxSizing: "border-box",
-        marginBottom: "5px",
+
 
         '&:hover': {
             backgroundColor: "rgba(0, 0, 0, 0.06);"
@@ -100,8 +100,8 @@ export const NavBarProj = () => {
             }}>
 
                 {toggleActiveStyles(index) === classes.active
-                ? <img src={"./img/menu"+index+".png"} className={classes.navIcon} alt=""/>
-                : <img src={"./img/menuInac"+index+".png"} className={classes.navIcon} alt=""/>
+                ? <img src={"/test-venturit/img/menu"+index+".png"} className={classes.navIcon} alt=""/>
+                : <img src={"/test-venturit/img/menuInac"+index+".png"} className={classes.navIcon} alt=""/>
                 }
 
 

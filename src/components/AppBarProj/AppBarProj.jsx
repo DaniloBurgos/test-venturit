@@ -11,179 +11,9 @@ import Popover from '@material-ui/core/Popover';
 import { NotifElement } from "../NotifElement/NotifElement";
 
 
-
-const useStyles = makeStyles({
-
-
-
-    appBarContent: {
-
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexFlow: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        boxSizing: "border-box",
-        paddingLeft: "10px",
-        paddingRight: "10px",
-
-    },
-
-    logo: {
-        display: "block",
-        height: "58%"
-
-    },
-
-    root: {
-
-        backgroundColor: "#3D84FF",
-        '&:hover': {
-            backgroundColor: "#3374D1",
-         },
-         borderRadius: "15px",
-
-        fontSize: "0.8rem",
-         fontStyle: "normal",
-         fontWeight: "300",
-         color: 'white',
-         fontFamily: "Gotham",
-
-         height: "45px",
-         width: "79px",
-         marginRight:"10px"
-
-    },
-
-    add: {
-
-        width: "7px",
-        marginRight: "5px",
-
-        color: "#ffffff",
-        fontfamily: "Gotham",
-        fontSize: "13px",
-        fontWeight: "350",
-        lineHeight: "16px"
-
-    },
-
-    function: {
-
-        width: "20px",
-
-    },
-
-    downNavbar: {
-
-        width: "13px",
-
-    },
-
-    userName: {
-
-        margin: "0 12px",
-        color: "#3e3a6f",
-        fontFamily: "Nunito",
-        fontSize: "16px",
-        fontWeight: "400",
-        lineHeight: "26px"
-
-    },
-
-    thumbNail: {
-
-        width: "56px"
-
-    },
-
-    rightSide: {
-
-        height: "100%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center"
-
-    },
-
-    searchContainer: {
-
-        backgroundColor: "#F5F5FB",
-        width: "311px",
-        height: "50px",
-        padding: "0 15px",
-
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center"
-
-    },
-
-    search: {
-
-        width: "13px",
-        height: "13px"
-    },
-
-    searchInput: {
-
-        border: "none",
-        backgroundColor: "inherit",
-        width: "90%",
-        height: "80%",
-
-        '&:focus': {
-            outline: "none",
-         },
-
-         '&::placeholder': {
-            color: "#9d9bb6",
-
-
-            color: "#9d9bb6",
-            fontFamily: "Nunito",
-            fontSize: "15px",
-            fontWeight: "400",
-            lineHeight: "20px",
-            letterSpacing: "-0.42857143px"
-
-
-         }
-
-    },
-
-    new: {
-
-        position: "absolute",
-        top: "21px",
-        left: "24px",
-        width: "13px",
-        height: "13px"
-    },
-
-    miPopOver: {
-
-        width: "335px",
-        backgroundColor: "white",
-        padding: "25px 25px 0px 25px",
-        boxSizing: "border-box"
-    }
-
-});
-
-
 export const AppBarProj = ({userName,userPhoto}) => {
 
     const classes = useStyles();
-
-
-
-
-
-
 
     /*//////////////////////////////////////   MessageNotifications  /////////////////////////////*/
 
@@ -282,14 +112,14 @@ export const AppBarProj = ({userName,userPhoto}) => {
 
     return(<div className={classes.appBarContent}>
 
-                <img src="./img/logo.png" className={classes.logo} alt=""/>
+                <img src="/test-venturit/img/logo.png" className={classes.logo} alt=""/>
 
-                <div className={classes.searchContainer}>
+                <div className={classes.searchContainer+" "+classes.deskElement}>
 
                   <input className={classes.searchInput} type="text" placeholder="Search and Find"></input>
 
                   <IconButton aria-label="notification">
-                     <img src="./img/search.svg" className={classes.search} alt=""/>
+                     <img src="/test-venturit/img/search.svg" className={classes.search} alt=""/>
                   </IconButton>
                 </div>
 
@@ -297,13 +127,13 @@ export const AppBarProj = ({userName,userPhoto}) => {
                 <div className={classes.rightSide}>
 
                     <Button variant="contained" disableElevation className={classes.root}>
-                        <img src="./img/add.svg" className={classes.add} alt=""/> ADD
+                        <img src="/test-venturit/img/add.svg" className={classes.add} alt=""/> ADD
                     </Button>
 
-                    <IconButton aria-describedby={id} aria-label="notification" onClick={handleClick}>
-                        <img src="./img/notification.png" className={classes.function}/>
+                    <IconButton className={classes.deskElement} aria-describedby={id} aria-label="notification" onClick={handleClick}>
+                        <img src="/test-venturit/img/notification.png" className={classes.function}/>
                         {notification===true
-                         ?<img src="./img/new.png" className={classes.new} alt=""/>
+                         ?<img src="/test-venturit/img/new.png" className={classes.new} alt=""/>
                          :null
                         }
                     </IconButton>
@@ -337,10 +167,10 @@ export const AppBarProj = ({userName,userPhoto}) => {
 
                     </Popover>
 
-                    <IconButton aria-describedby={idMess} aria-label="message" onClick={handleClickMess}>
-                        <img src="./img/message.png" className={classes.function} alt=""/>
+                    <IconButton className={classes.deskElement} aria-describedby={idMess} aria-label="message" onClick={handleClickMess}>
+                        <img src="/test-venturit/img/message.png" className={classes.function} alt=""/>
                         {message===true
-                         ?<img src="./img/new.png" className={classes.new} alt=""/>
+                         ?<img src="/test-venturit/img/new.png" className={classes.new} alt=""/>
                          :null
                         }
                     </IconButton>
@@ -374,12 +204,12 @@ export const AppBarProj = ({userName,userPhoto}) => {
 
                     </Popover>
 
-                    <Typography className={classes.userName}>{userName}</Typography>
+                    <Typography className={classes.userName+" "+classes.deskElement}>{userName}</Typography>
 
                     <img src={userPhoto} className={classes.thumbNail} alt=""/>
 
-                    <IconButton aria-label="message">
-                        <img src="./img/downNavbar.png" className={classes.downNavbar} alt=""/>
+                    <IconButton className={classes.deskElement} aria-label="message">
+                        <img src="/test-venturit/img/downNavbar.png" className={classes.downNavbar} alt=""/>
                     </IconButton>
 
                 </div>
@@ -393,3 +223,186 @@ AppBarProj.propTypes = {
     userPhoto: PropTypes.string,
 
 }
+
+const useStyles = makeStyles({
+
+
+
+    appBarContent: {
+
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexFlow: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        boxSizing: "border-box",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+
+    },
+
+    deskElement: {
+        "@media (max-width: 1000px)": {
+
+            display: "none !important",
+
+        }
+    },
+
+    logo: {
+        display: "block",
+        height: "58%",
+        marginLeft: "2px"
+
+    },
+
+    root: {
+
+        backgroundColor: "#3D84FF",
+        '&:hover': {
+            backgroundColor: "#3374D1",
+         },
+         borderRadius: "15px",
+
+        fontSize: "0.78rem",
+         fontStyle: "normal",
+         fontWeight: "500",
+         color: 'white',
+         fontFamily: "Nunito",
+
+         height: "45px",
+         width: "79px",
+         marginRight:"40px",
+
+         "@media (max-width: 1236px)": {
+
+            display: "none",
+
+        }
+
+    },
+
+    add: {
+
+        width: "7px",
+        marginRight: "5px",
+        marginBottom: "1px",
+
+        color: "#ffffff",
+        fontSize: "13px",
+        fontWeight: "350",
+        lineHeight: "16px"
+
+    },
+
+    function: {
+
+        width: "auto",
+        height: "24px"
+
+    },
+
+    downNavbar: {
+
+        width: "13px",
+        marginRight: "16px"
+
+    },
+
+    userName: {
+
+        margin: "0 12px",
+        color: "#3e3a6f",
+        fontFamily: "Nunito",
+        fontSize: "16px",
+        fontWeight: "400",
+        lineHeight: "26px"
+
+    },
+
+    thumbNail: {
+
+        width: "56px"
+
+    },
+
+    rightSide: {
+
+        height: "100%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center"
+
+    },
+
+    searchContainer: {
+
+        backgroundColor: "#F5F5FB",
+        width: "311px",
+        height: "50px",
+        paddingLeft: "15px",
+        paddingRight: "5px",
+
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+
+        boxSizing: "border-box",
+        marginLeft: "193px"
+
+    },
+
+    search: {
+
+        width: "13px",
+        height: "13px"
+    },
+
+    searchInput: {
+
+        border: "none",
+        backgroundColor: "inherit",
+        width: "90%",
+        height: "80%",
+
+        '&:focus': {
+            outline: "none",
+         },
+
+         '&::placeholder': {
+            color: "#9d9bb6",
+
+
+            color: "#9d9bb6",
+            fontFamily: "Nunito",
+            fontSize: "15px",
+            fontWeight: "400",
+            lineHeight: "20px",
+            letterSpacing: "-0.42857143px"
+
+
+         }
+
+    },
+
+    new: {
+
+        position: "absolute",
+        top: "24px",
+        left: "26px",
+        width: "13px",
+        height: "13px"
+    },
+
+    miPopOver: {
+
+        width: "335px",
+        backgroundColor: "white",
+        padding: "25px 25px 0px 25px",
+        boxSizing: "border-box"
+    }
+
+});

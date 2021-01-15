@@ -31,17 +31,20 @@ const useStyles = makeStyles({
         fontSize: "30px",
         fontWeight: "350",
         lineHeight: "36px",
-        letterSpacing: "-0.85714287px"
+        letterSpacing: "-0.85714287px",
+
+        marginTop: "23px"
 
     },
 
     languageCard: {
 
         width: "165px",
-        height: "80px",
+        height: "78px",
         backgroundColor: "white",
+        borderRadius: "5px",
 
-        boxShadow: "0 4px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11)",
+        boxShadow: "10px 14px 60px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.11)",
 
         display: "flex",
         flexDirection: "column",
@@ -58,6 +61,7 @@ const useStyles = makeStyles({
         fontSize: "12px",
         fontWeight: "400",
         lineHeight: "16px",
+        height: "12px"
 
     },
 
@@ -119,7 +123,8 @@ const useStyles = makeStyles({
         fontSize: "30px",
         fontWeight: "350",
         lineHeight: "36px",
-        letterSpacing: "-0.85714287px"
+        letterSpacing: "-0.85714287px",
+        marginBottom: "10px"
 
     },
 
@@ -128,7 +133,7 @@ const useStyles = makeStyles({
         color: "#ffffff",
         fontFamily: "Nunito",
         fontSize: "18px",
-        fontWeight: "600",
+        fontWeight: "500",
         lineHeight: "26px",
 
     }
@@ -156,7 +161,7 @@ export const WelcomeElement = ({userName, state, language}) => {
                     <Typography className={classes.langCurrent} >Currently Learning</Typography>
 
                     <div className={classes.languageBadge}>
-                        <img src={`./img/${language.toLowerCase()}.png`} className={classes.langFlag}></img>
+                        <img src={`/test-venturit/img/${language.toLowerCase()}.png`} className={classes.langFlag}></img>
                         <Typography className={classes.langName}>{language}</Typography>
                     </div>
 
@@ -166,7 +171,7 @@ export const WelcomeElement = ({userName, state, language}) => {
 
             <div className={classes.lowerRow}>
 
-                        <img src={"./img/header.png"} className={classes.langFlag}></img>
+                        <img src={"/test-venturit/img/header.png"} className={classes.langFlag}></img>
 
 
                         <div className={classes.bannerInfo}>

@@ -48,11 +48,10 @@ const useStyles = makeStyles({
     lowerRow: {
 
         width: "100%",
-        height: "146",
         position: "relative",
 
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "space-between"
 
 
@@ -104,7 +103,6 @@ export const ActivityElement = ({events, eventsToday}) => {
             <div className={classes.lowerRow}>
 
                 <SimpleAccordion></SimpleAccordion>
-
 
             </div>
 
