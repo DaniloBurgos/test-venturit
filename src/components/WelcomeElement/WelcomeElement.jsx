@@ -21,7 +21,7 @@ export const WelcomeElement = ({userName, state, language}) => {
                     <Typography className={classes.langCurrent} >Currently Learning</Typography>
 
                     <div className={classes.languageBadge}>
-                        <img src={`./img/${language.toLowerCase()}.png`} className={classes.langFlag}></img>
+                        <img src={`/test-venturit/img/${language.toLowerCase()}.png`} className={classes.langFlag}></img>
                         <Typography className={classes.langName}>{language}</Typography>
                     </div>
 
@@ -31,9 +31,9 @@ export const WelcomeElement = ({userName, state, language}) => {
 
             <div className={classes.lowerRow}>
 
-                        <img src={"./img/header.png"} className={classes.welcomeBannerDesktop}></img>
-                        <img src={"./img/welcomeMobile.png"} className={classes.welcomeMobile}></img>
-                        <img src={"./img/bannerWelcomeTablet.png"} className={classes.welcomeTablet}></img>
+                        <img src={"/test-venturit/img/header.png"} className={classes.welcomeBannerDesktop}></img>
+                        <img src={"/test-venturit/img/welcomeMobile.png"} className={classes.welcomeMobile}></img>
+                        <img src={"/test-venturit/img/bannerWelcomeTablet.png"} className={classes.welcomeTablet}></img>
 
 
                         <div className={classes.bannerInfo}>

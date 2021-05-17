@@ -16,14 +16,14 @@ export default function SimpleAccordion() {
 
       <Accordion className={classes2.editAcordion}>
         <AccordionSummary
-          expandIcon={<img src="./img/expandAccordion.png"></img>}
+          expandIcon={<img src="/test-venturit/img/expandAccordion.png"></img>}
           aria-controls="panel1a-content"
           id="panel1a-header"
           className={classes2.headerAcordion}
         >
           <div className={classes2.headerAcordion}>
 
-          <img className={classes2.acordionIcon} src="./img/activity1.png"></img>
+          <img className={classes2.acordionIcon} src="/test-venturit/img/activity1.png"></img>
           <Typography className={classes2.acordionHeading}>You have new 5 followers including <p>Kathryn Crawford</p> and <p>Piper Shaw</p></Typography>
 
           </div>
@@ -39,14 +39,14 @@ export default function SimpleAccordion() {
 
       <Accordion className={classes2.editAcordion}>
         <AccordionSummary
-          expandIcon={<img src="./img/expandAccordion.png"></img>}
+          expandIcon={<img src="/test-venturit/img/expandAccordion.png"></img>}
           aria-controls="panel1a-content"
           id="panel1a-header"
           className={classes2.headerAcordion}
         >
           <div className={classes2.headerAcordion}>
 
-          <img className={classes2.acordionIcon} src="./img/activity2.png"></img>
+          <img className={classes2.acordionIcon} src="/test-venturit/img/activity2.png"></img>
           <Typography className={classes2.acordionHeading}>3 new events were added to your calendar</Typography>
 
           </div>
@@ -62,14 +62,14 @@ export default function SimpleAccordion() {
 
       <Accordion className={classes2.editAcordion}>
         <AccordionSummary
-          expandIcon={<img src="./img/expandAccordion.png"></img>}
+          expandIcon={<img src="/test-venturit/img/expandAccordion.png"></img>}
           aria-controls="panel1a-content"
           id="panel1a-header"
           className={classes2.headerAcordion}
         >
           <div className={classes2.headerAcordion}>
 
-          <img className={classes2.acordionIcon} src="./img/activity3.png"></img>
+          <img className={classes2.acordionIcon} src="/test-venturit/img/activity3.png"></img>
           <Typography className={classes2.acordionHeading}>You have 3 pending readings to complete 🤓</Typography>
 
           </div>

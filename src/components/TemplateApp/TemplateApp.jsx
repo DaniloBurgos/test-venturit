@@ -26,7 +26,7 @@ export const TemplateApp = ({children}) => {
                             <input className={classes.searchInput} type="text" placeholder="Search and Find"></input>
 
                             <IconButton aria-label="notification">
-                                <img src="./img/search.svg" className={classes.search} alt=""/>
+                                <img src="/test-venturit/img/search.svg" className={classes.search} alt=""/>
                             </IconButton>
                          </div>
 

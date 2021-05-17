@@ -11,41 +11,20 @@ export const ProgressCards = ({task,number,special}) => {
 
     const classes = useStyles();
 
-    function renderEvent(param) {
-        switch(param) {
-          case "1":
-            return <Typography classes={{root:classes.notifType}} >Total Webinars</Typography>;
-          case "2":
-            return <Typography classes={{root:classes.notifType}} >Pending Assignments</Typography>;
-          case "3":
-            return <Typography classes={{root:classes.notifType}} >Total Units</Typography>;
-          case "4":
-            return <Typography classes={{root:classes.notifType}} >Total Readings</Typography>;
-          case "5":
-            return <Typography classes={{root:classes.notifType}} >Total Videos</Typography>;
-        }
-      }
 
-
-
-    return( <ButtonBase className={classes.taskCardContainer}>
-
-
-
-      <div className={classes.info}>
-
-          {
-          renderEvent(task)
-          }
-
-      <Typography classes={{root:classes.taskNumber}}>{number}</Typography>
-
-      </div>
-
-
-
-
-        </ButtonBase>
+    return(special ?
+            <ButtonBase className={classes.taskCardContainerSpecial}>
+              <div className={classes.info}>
+                <Typography classes={{root:classes.notifType}} >{task}</Typography>
+                <Typography classes={{root:classes.taskNumber}}>{number}</Typography>
+              </div>
+            </ButtonBase>
+            :            <ButtonBase className={classes.taskCardContainer}>
+            <div className={classes.info}>
+              <Typography classes={{root:classes.notifType}} >{task}</Typography>
+              <Typography classes={{root:classes.taskNumber}}>{number}</Typography>
+            </div>
+          </ButtonBase>
 
 
     );
@@ -97,17 +76,29 @@ const useStyles = makeStyles({
      marginBottom: "25px",
      paddingLeft: "25px",
      paddingRight: "25px",
-     backgroundColor: "black",
+     backgroundColor: "#1884FF",
      borderRadius: "10px",
 
      display: "flex",
      flexDirection: "row",
      justifyContent: "space-between",
      alignItems: "center",
+     boxShadow: "10px 14px 30px 0 rgb(24 112 206 / 40%);",
 
      '&:hover': {
-         backgroundColor: "rgba(0, 0, 0, 0.04);"
-      }
+         backgroundColor: "#1870ce"
+      },
+
+      "@media (max-width: 1370px)": {
+
+        width: "48%",
+
+    },
+
+     '& >div>p': {
+       color: "white"
+     }
+
 
   },
 

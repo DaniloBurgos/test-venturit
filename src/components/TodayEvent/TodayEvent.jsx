@@ -6,6 +6,50 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { ButtonBase } from '@material-ui/core';
 
+
+
+
+export const TodayEvent = ({type,date}) => {
+
+    const classes = useStyles();
+
+    function renderEvent(param) {
+        switch(param) {
+          case "1":
+            return <Typography classes={{root:classes.notifType}} >Webinar: the basics of…</Typography>;
+          case "2":
+            return <Typography classes={{root:classes.notifType}} >Team Building Activity🔥</Typography>;
+        }
+      }
+
+
+    return(<ButtonBase className={classes.eventContainer}>
+
+                <img src={"/test-venturit/img/thumbFinal.png"} className={classes.notImage} alt=""/>
+
+                <div className={classes.info}>
+
+                   <Typography classes={{root:classes.date}}>{date}</Typography>
+
+                    {
+                    renderEvent(type)
+                    }
+
+
+
+                </div>
+
+          </ButtonBase>
+    );
+}
+
+TodayEvent.propTypes = {
+
+    type: PropTypes.string,
+    date: PropTypes.string,
+
+}
+
 const useStyles = makeStyles({
 
     eventContainer: {
@@ -92,45 +136,3 @@ const useStyles = makeStyles({
 
 
 });
-
-
-export const TodayEvent = ({type,date}) => {
-
-    const classes = useStyles();
-
-    function renderEvent(param) {
-        switch(param) {
-          case "1":
-            return <Typography classes={{root:classes.notifType}} >Webinar: the basics of…</Typography>;
-          case "2":
-            return <Typography classes={{root:classes.notifType}} >Team Building Activity🔥</Typography>;
-        }
-      }
-
-
-    return(<ButtonBase className={classes.eventContainer}>
-
-                <img src={"./img/thumbFinal.png"} className={classes.notImage} alt=""/>
-
-                <div className={classes.info}>
-
-                   <Typography classes={{root:classes.date}}>{date}</Typography>
-
-                    {
-                    renderEvent(type)
-                    }
-
-
-
-                </div>
-
-          </ButtonBase>
-    );
-}
-
-TodayEvent.propTypes = {
-
-    type: PropTypes.string,
-    date: PropTypes.string,
-
-}

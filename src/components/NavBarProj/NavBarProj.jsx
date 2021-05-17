@@ -5,55 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 
 
-const useStyles = makeStyles({
 
-    navBarContent: {
-
-        boxSizing: "border-box",
-        width: "inhereit",
-        height: "inherit",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-    },
-
-    navIcon: {
-
-        width: "15px",
-        height: "17px"
-
-    },
-
-    root: {
-
-        width: "inherit",
-        height: "55px",
-        borderRadius: "0",
-        boxSizing: "border-box",
-
-
-        '&:hover': {
-            backgroundColor: "rgba(0, 0, 0, 0.06);"
-         },
-
-    },
-
-    active: {
-
-        backgroundColor: "#005dff !important",
-
-    },
-
-    inactive: {
-
-        backgroundColor: "none",
-
-    },
-
-
-
-
-});
 
 
 export const NavBarProj = () => {
@@ -100,8 +52,8 @@ export const NavBarProj = () => {
             }}>
 
                 {toggleActiveStyles(index) === classes.active
-                ? <img src={"./img/menu"+index+".png"} className={classes.navIcon} alt=""/>
-                : <img src={"./img/menuInac"+index+".png"} className={classes.navIcon} alt=""/>
+                ? <img src={"/test-venturit/img/menu"+index+".png"} className={classes.navIcon} alt=""/>
+                : <img src={"/test-venturit/img/menuInac"+index+".png"} className={classes.navIcon} alt=""/>
                 }
 
 
@@ -119,3 +71,52 @@ export const NavBarProj = () => {
 
 }
 
+const useStyles = makeStyles({
+
+    navBarContent: {
+
+        boxSizing: "border-box",
+        width: "inhereit",
+        height: "inherit",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+    },
+
+    navIcon: {
+
+        width: "17px",
+        height: "auto"
+
+    },
+
+    root: {
+
+        width: "inherit",
+        height: "55px",
+        borderRadius: "0",
+        boxSizing: "border-box",
+
+
+        '&:hover': {
+            backgroundColor: "rgba(0, 0, 0, 0.06);"
+         },
+
+    },
+
+    active: {
+
+        backgroundColor: "#005dff !important",
+
+    },
+
+    inactive: {
+
+        backgroundColor: "none",
+
+    },
+
+
+
+
+});

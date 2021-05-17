@@ -8,14 +8,27 @@ import { ProgressCards } from "../ProgressCards/ProgressCards";
 export const ProgressComponent = ({events, eventsToday}) => {
 
     const classes = useStyles();
+    const tasks = [
+
+        {task: "Total Webinars",
+         number: "9",},
+         {task: "Pending Assignments",
+         number: "0"},
+         {task: "Total Units",
+         number: "5"},
+         {task: "Total Readings",
+         number: "14"},
+         {task: "Total Videos",
+         number: "14",
+         special: true},
+
+    ];
 
 
     return(<div className={classes.progressContainer}>
 
 
             <div className={classes.progressGraphic}>
-
-
 
 
             </div>
@@ -35,10 +48,14 @@ export const ProgressComponent = ({events, eventsToday}) => {
 
                      <div className={classes.dataCards}>
 
-                            <ProgressCards task="1" number="9"></ProgressCards>
-                            <ProgressCards task="2" number="0"></ProgressCards>
-                            <ProgressCards task="3" number="5"></ProgressCards>
-                            <ProgressCards task="4" number="14"></ProgressCards>
+                     {tasks.map((not)=>{
+
+                        return not.special ?
+                        <ProgressCards task={not.task} number={not.number} special={true}></ProgressCards>
+                        :<ProgressCards task={not.task} number={not.number}></ProgressCards>
+                      })
+
+                     }
 
 
                      </div>
@@ -56,14 +73,28 @@ export const ProgressComponent = ({events, eventsToday}) => {
 
 
 
-                    <img className={classes.bannerFinal} src="./img/bannerFinal.png"></img>
+                    <img className={classes.bannerFinal} src="/test-venturit/img/bannerFinal.png"></img>
 
                 </div>
 
 
             </div>
 
+            <div className={classes.lowerConfirmMobile}>
 
+                <div className={classes.lowerConfirmText}>
+
+                    <Typography className={classes.firstLower}>Confirm your account details</Typography>
+                    <Typography className={classes.secondLower}> Please confirm your email and phone number.😰</Typography>
+
+                </div>
+
+
+
+                <img className={classes.footerBackground} src="/test-venturit/img/footerBackground.png"></img>
+
+
+                </div>
 
            </div>
 
@@ -92,6 +123,7 @@ const useStyles = makeStyles({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
+        flexWrap: "wrap",
 
         "@media (max-width: 1000px)": {
 
@@ -100,6 +132,14 @@ const useStyles = makeStyles({
 
         }
 
+
+
+    },
+
+    footerBackground: {
+
+        height: "119px",
+        width: "auto",
 
 
     },
@@ -177,15 +217,42 @@ const useStyles = makeStyles({
 
     bannerFinal: {
         width: "100%",
-        height: "66px"
+        height: "66px",
+        display: "block",
     },
+
 
     upperColumn:{
 
     },
 
     lowerConfirm: {
-        position: "relative"
+        position: "relative",
+        display: "block",
+        "@media (max-width: 1370px)": {
+
+            display: "none",
+
+        }
+
+    },
+
+    lowerConfirmMobile: {
+
+        marginTop: "38px",
+        position: "relative",
+        display: "none",
+
+        width: "100%",
+        height: "119px",
+        borderRadius: "15px",
+        backgroundColor: "#FE9B00",
+
+        "@media (max-width: 1370px)": {
+
+            display: "block",
+
+        }
     },
 
     lowerConfirmText: {

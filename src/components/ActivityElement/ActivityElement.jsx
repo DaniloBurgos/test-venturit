@@ -4,7 +4,43 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import SimpleAccordion from "../SimpleAccordion/SimpleAccordion";
 
+export const ActivityElement = ({events, eventsToday}) => {
 
+    const classes = useStyles();
+
+
+    return(<div className={classes.eventContainer}>
+
+
+            <div className={classes.upperRow}>
+
+                <Typography className={classes.tittle}>Activity</Typography>
+                <hr className={classes.lineTittle}></hr>
+
+            </div>
+
+            <div className={classes.lowerRow}>
+
+                <SimpleAccordion></SimpleAccordion>
+
+            </div>
+
+           </div>
+
+
+
+    );
+
+
+
+}
+
+ActivityElement.propTypes = {
+
+    events: PropTypes.array,
+    eventsToday: PropTypes.array,
+
+}
 
 const useStyles = makeStyles({
 
@@ -84,41 +120,3 @@ const useStyles = makeStyles({
 
 
 });
-
-export const ActivityElement = ({events, eventsToday}) => {
-
-    const classes = useStyles();
-
-
-    return(<div className={classes.eventContainer}>
-
-
-            <div className={classes.upperRow}>
-
-                <Typography className={classes.tittle}>Activity</Typography>
-                <hr className={classes.lineTittle}></hr>
-
-            </div>
-
-            <div className={classes.lowerRow}>
-
-                <SimpleAccordion></SimpleAccordion>
-
-            </div>
-
-           </div>
-
-
-
-    );
-
-
-
-}
-
-ActivityElement.propTypes = {
-
-    events: PropTypes.array,
-    eventsToday: PropTypes.array,
-
-}

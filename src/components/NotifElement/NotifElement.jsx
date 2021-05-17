@@ -4,41 +4,20 @@ import { Typography } from "@material-ui/core";
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 import { ButtonBase } from '@material-ui/core';
 
-export const NotifElement = ({type,date}) => {
+export const NotifElement = ({content,date,icon}) => {
 
     const classes = useStyles();
-
-    function renderEvent(param) {
-        switch(param) {
-          case "1":
-            return <Typography classes={{root:classes.notifType}} >You have a new session to Re</Typography>;
-          case "2":
-            return <Typography classes={{root:classes.notifType}} >You have a virtual</Typography>;
-          case "3":
-            return <Typography classes={{root:classes.notifType}} >You have a face to face</Typography>;
-          case "4":
-            return <Typography classes={{root:classes.notifType}} >Daniel has messaged you</Typography>;
-          case "5":
-            return <Typography classes={{root:classes.notifType}} >María has messaged you</Typography>;
-          case "6":
-            return <Typography classes={{root:classes.notifType}} >Ana has messaged you</Typography>;
-        }
-      }
 
 
     return(<ButtonBase className={classes.notifContainer}>
 
-                <img src={"./img/not"+type+".png"} className={classes.notImage} alt=""/>
+                <img src={icon} className={classes.notImage} alt=""/>
 
                 <div className={classes.info}>
 
-                    {
-                    renderEvent(type)
-                    }
+                <Typography classes={{root:classes.notifType}} >{content}</Typography>
 
                 <Typography classes={{root:classes.date}}>{date}</Typography>
 
@@ -50,8 +29,9 @@ export const NotifElement = ({type,date}) => {
 
 NotifElement.propTypes = {
 
-    type: PropTypes.string,
+    content: PropTypes.string,
     date: PropTypes.string,
+    icon: PropTypes.string
 
 }
 

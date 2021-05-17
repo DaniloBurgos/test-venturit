@@ -36,15 +36,18 @@ export const AppBarProj = ({userName,userPhoto}) => {
     const [popMessage, changePopMessages] = React.useState ([
         {id: "1",
          date:"Today, 10:30AM",
-         type: "4"},
+         content: "Daniel has messaged you",
+         icon: "/test-venturit/img/not4.png"},
 
          {id: "2",
          date:"Yesterday, 9:45PM",
-         type: "5"},
+         content: "María has messaged you",
+         icon: "/test-venturit/img/not5.png",},
 
          {id: "3",
          date:"Yesterday, 10:00PM",
-         type: "6"}
+         content: "Ana has messaged you",
+         icon: "/test-venturit/img/not6.png"}
     ]);
 
     /*////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -78,15 +81,18 @@ export const AppBarProj = ({userName,userPhoto}) => {
     const [popNotifications, changePopNotifications] = React.useState ([
         {id: "1",
          date:"Today, 10:30AM",
-         type: "1"},
+         content: "You have a new session to Re",
+         icon: "/test-venturit/img/not1.png"},
 
          {id: "2",
          date:"Yesterday, 9:45PM",
-         type: "2"},
+         content: "You have a virtual",
+         icon: "/test-venturit/img/not2.png"},
 
          {id: "3",
          date:"Yesterday, 10:00PM",
-         type: "3"}
+         content: "You have a face to face",
+         icon: "/test-venturit/img/not3.png"}
     ]);
 
     /*////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -95,35 +101,23 @@ export const AppBarProj = ({userName,userPhoto}) => {
     const [notification, changeNotification] = React.useState (true);
     const [message, changeMessage] = React.useState (true);
 
-    function handleNotif () {
-
-        changeNotification(!notification);
-
-    }
-
-    function handleMessage () {
-
-        changeMessage(false);
-
-    }
-
     /*////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
     return(<div className={classes.appBarContent}>
 
                 <IconButton className={classes.onlyMobile} aria-label="notification">
-                    <img src="./img/menuMobileIcon.svg" className={classes.menuMobile} alt=""/>
+                    <img src="/test-venturit/img/menuMobileIcon.svg" className={classes.menuMobile} alt=""/>
                 </IconButton>
 
-                <img src="./img/logo.png" className={classes.logo} alt=""/>
+                <img src="/test-venturit/img/logo.png" className={classes.logo} alt=""/>
 
                 <div className={classes.searchContainer+" "+classes.deskElement}>
 
                   <input className={classes.searchInput} type="text" placeholder="Search and Find"></input>
 
                   <IconButton aria-label="notification">
-                     <img src="./img/search.svg" className={classes.search} alt=""/>
+                     <img src="/test-venturit/img/search.svg" className={classes.search} alt=""/>
                   </IconButton>
                 </div>
 
@@ -131,13 +125,13 @@ export const AppBarProj = ({userName,userPhoto}) => {
                 <div className={classes.rightSide}>
 
                     <Button variant="contained" disableElevation className={classes.root}>
-                        <img src="./img/add.svg" className={classes.add} alt=""/> ADD
+                        <img src="/test-venturit/img/add.svg" className={classes.add} alt=""/> ADD
                     </Button>
 
                     <IconButton className={classes.deskElement} aria-describedby={id} aria-label="notification" onClick={handleClick}>
-                        <img src="./img/notification.png" className={classes.function}/>
+                        <img src="/test-venturit/img/notification.png" className={classes.function}/>
                         {notification===true
-                         ?<img src="./img/new.png" className={classes.new} alt=""/>
+                         ?<img src="/test-venturit/img/new.png" className={classes.new} alt=""/>
                          :null
                         }
                     </IconButton>
@@ -163,7 +157,7 @@ export const AppBarProj = ({userName,userPhoto}) => {
 
                         {popNotifications.map((not)=>{
 
-                            return <NotifElement key={not.id} type={not.type} date={not.date}></NotifElement>
+                            return <NotifElement key={not.id} content={not.content} date={not.date} icon={not.icon}></NotifElement>
 
                         })
 
@@ -172,9 +166,9 @@ export const AppBarProj = ({userName,userPhoto}) => {
                     </Popover>
 
                     <IconButton className={classes.deskElement} aria-describedby={idMess} aria-label="message" onClick={handleClickMess}>
-                        <img src="./img/message.png" className={classes.function} alt=""/>
+                        <img src="/test-venturit/img/message.png" className={classes.function} alt=""/>
                         {message===true
-                         ?<img src="./img/new.png" className={classes.new} alt=""/>
+                         ?<img src="/test-venturit/img/new.png" className={classes.new} alt=""/>
                          :null
                         }
                     </IconButton>
@@ -200,7 +194,7 @@ export const AppBarProj = ({userName,userPhoto}) => {
 
                         {popMessage.map((not)=>{
 
-                            return <NotifElement key={not.id} type={not.type} date={not.date}></NotifElement>
+                            return <NotifElement key={not.id} content={not.content} date={not.date}  icon={not.icon}></NotifElement>
 
                         })
 
@@ -212,8 +206,8 @@ export const AppBarProj = ({userName,userPhoto}) => {
 
                     <img src={userPhoto} className={classes.thumbNail} alt=""/>
 
-                    <IconButton className={classes.deskElement} aria-label="message">
-                        <img src="./img/downNavbar.png" className={classes.downNavbar} alt=""/>
+                    <IconButton className={classes.deskElement+" "+classes.downNavbarButton} aria-label="message">
+                        <img src="/test-venturit/img/downNavbar.png" className={classes.downNavbar} alt=""/>
                     </IconButton>
 
                 </div>
@@ -230,7 +224,9 @@ AppBarProj.propTypes = {
 
 const useStyles = makeStyles({
 
-
+    downNavbarButton: {
+        marginRight: "16px"
+    },
 
     appBarContent: {
 
@@ -334,7 +330,7 @@ const useStyles = makeStyles({
     downNavbar: {
 
         width: "13px",
-        marginRight: "16px"
+
 
     },
 
